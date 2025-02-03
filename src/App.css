@@ -26,6 +26,7 @@ body{
 }
 #pass{
     background-color: transparent;
+    width:80%;
      border:none;
      outline:none;
      font-size: 1rem;
