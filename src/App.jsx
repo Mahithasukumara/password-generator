@@ -52,22 +52,28 @@
     return (
       
       <>
-      
-        <input type="text"  id="pass" value={password} placeholder='Password' ref={passwordRef} readOnly></input>
+         <h3 class="heading">Password Generator</h3>
+         <div class="container">
+          <div class="password-box">  
+       <input type="text"  id="pass" value={password} placeholder='Password' ref={passwordRef} readOnly></input>
         <button id="tocopy" onClick={copytoclipboard}>{copied?'copied':'copy'}</button>
+        </div>   
         <input type="range" id="range" value={length} min={8} max={100} 
         onChange={(e)=>setlength(e.target.value)}></input>
-        <label htmlFor="length">Length:{length}</label>
+       
+        <label htmlFor="length" class="label">Length:{length}</label>
         
         <input type="checkbox" checked={numbersallowed} 
         onChange={()=>setnumberallowed((prev)=>!prev)}
         ></input>
-        <label htmlFor='numbers'>Numbers</label>
+        <label htmlFor='numbers' class="label">Numbers</label>
 
         <input type="checkbox" checked={specialcharallowed} 
         onChange={(e)=>setspecialcharallowed((prev)=>!prev)}
         ></input>
-        <label htmlFor='specialchar'>Special characters</label>
+        <label htmlFor='specialchar' class="label">Special characters</label>
+        </div>
+       
 
       </>
     )
